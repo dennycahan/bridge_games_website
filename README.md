@@ -59,11 +59,15 @@ has to exist before launch.
 ## Screenshot provenance
 
 All app images are real screenshots of bridge.games taken 2026-08-14 on the
-live server via a kibitzed bot table (`kibitzers_see_all` enabled so all four
-hands show). To retake: create a table with four bots, kibitz it in a browser
-at 1600×1000@2x, screenshot, crop. `images/og-image.jpg` is a 1200×630 crop of
-the hero shot for link previews. The video-section "four corners" figure is a
-CSS illustration (bots have no cameras), deliberately stylized rather than a
+live server. The hero and phone shots are a **seated player's own view**: a
+temporary account ("Ellen") sat South with three bots, a script passed her
+auctions and played her lowest legal cards over the channel until a board
+mid-play with her on turn — so the shot shows only her hand plus dummy, the
+gold your-turn nameplate, the Claim/Undo command bar, and a genuinely scored
+drawer ("1 watching" is a real kibitzer). The lobby and replay-panel images
+came from a kibitzed bot table. `images/og-image.jpg` is a 1200×630 crop of
+the hero for link previews. The video-section "four corners" figure is a CSS
+illustration (bots have no cameras), deliberately stylized rather than a
 faked screenshot.
 
 ## Honesty guardrails for future copy
