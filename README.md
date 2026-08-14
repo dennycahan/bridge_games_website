@@ -75,4 +75,6 @@ faked screenshot.
 Don't claim: guest play without an account, bot difficulty levels (the two bots
 differ in speed, not strength), video at tournament tables or on phones,
 individual/team events (pairs only today), masterpoints or league sanctioning,
-or password reset (not wired up yet).
+password reset (not wired up yet), or regularly scheduled house-run games
+(every event is player-hosted today; Denny plans house games once built out —
+add them to the page only when they actually run).
