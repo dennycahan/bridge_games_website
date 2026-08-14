@@ -348,6 +348,20 @@ section h2 {
 .ticklist.hearts li::before { content: '♥'; color: var(--gold); }
 .ticklist strong { color: var(--cream); }
 
+/* centered craft figure (e.g. the bidding box) */
+.craft-figure {
+  margin: 3rem auto 0;
+  max-width: 420px;
+  text-align: center;
+}
+.craft-figure img {
+  margin-inline: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 1px rgba(243, 236, 216, 0.08), 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+.craft-figure figcaption { margin-top: 1rem; }
+
 /* small in-copy UI fragment (e.g. the captain's menu) */
 .ui-snippet { margin: 1.9rem 0 0; }
 .ui-snippet img {
