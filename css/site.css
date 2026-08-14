@@ -557,6 +557,34 @@ section h2 {
 .foot-mark .spade { color: var(--gold); }
 .site-foot a { color: var(--cream-soft); }
 
+/* ---------- document pages (privacy, terms) ---------- */
+
+.doc-page { padding: 2.5rem 0 5rem; }
+.doc-page .wrap { max-width: 46rem; }
+.doc-page h1 {
+  font-family: var(--display);
+  font-weight: 560;
+  font-size: clamp(2.1rem, 5vw, 3rem);
+  margin: 0 0 0.4rem;
+}
+.doc-date {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: var(--cream-dim);
+  margin-bottom: 2.2rem;
+}
+.doc-page h2 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin: 2.4rem 0 0.7rem;
+}
+.doc-page p, .doc-page li { color: var(--cream-soft); font-size: 1.05rem; }
+.doc-page strong { color: var(--cream); }
+.doc-page ul { padding-left: 1.3rem; margin: 0 0 1.1em; }
+.doc-page li { margin-bottom: 0.55em; }
+
 /* ---------- responsive ---------- */
 
 @media (max-width: 960px) {
