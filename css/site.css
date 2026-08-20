@@ -370,6 +370,8 @@ section h2 {
   border: 1px solid rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 0 1px rgba(243, 236, 216, 0.08), 0 14px 34px rgba(0, 0, 0, 0.45);
 }
+/* the traveller's table needs a little more width to stay legible */
+.ui-snippet.wide img { width: min(380px, 100%); }
 
 /* ---------- the table diagram (A/V signature) ---------- */
 

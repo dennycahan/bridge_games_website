@@ -58,23 +58,30 @@ has to exist before launch.
 
 ## Screenshot provenance
 
-All app images are real screenshots of bridge.games taken 2026-08-14 on the
-live server. The hero and phone shots are a **seated player's own view**: a
-temporary account ("Ellen") sat South with three bots, a script passed her
+All app images are real screenshots of the current bridge.games build,
+retaken 2026-08-20 after the table/lobby redesign (auction pad + level→strain
+bidding box, name bars, drawer dock, felt lobby cards). They were shot on an
+isolated staging node running the production code against a **copy of the
+live database**, so every score, field percentage, and traveller row is a
+real club result; the staging boards and the throwaway database were deleted
+after the shoot. The hero and phone shots are a **seated player's own view**:
+a temporary account ("Ellen") sat South with three bots, a script passed her
 auctions and played her lowest legal cards over the channel until a board
-mid-play with her on turn — so the shot shows only her hand plus dummy, the
-gold your-turn nameplate, the Claim/Undo command bar, and a genuinely scored
-drawer ("1 watching" is a real kibitzer). The lobby and replay-panel images
-came from a kibitzed bot table. `images/og-image.jpg` is a 1200×630 crop of
-the hero for link previews. The video-section "four corners" figure is a CSS
-illustration (bots have no cameras), deliberately stylized rather than a
-faked screenshot.
+mid-play with her on turn defending — her hand plus dummy, the gold your-turn
+nameplate, the Claim/Undo command bar, and a genuinely scored drawer
+("1 watching" is a real kibitzer, staged as "Margaret"). The captain-menu and
+settings shots are the captain's own view at a forming table; the traveller
+and replay panels are the drawer dock's own objects. `images/og-image.jpg` is
+a 1200×630 crop of the hero for link previews. The video-section "four
+corners" figure is a CSS illustration (bots have no cameras), deliberately
+stylized rather than a faked screenshot.
 
 ## Honesty guardrails for future copy
 
 Don't claim: guest play without an account, bot difficulty levels (the two bots
 differ in speed, not strength), video at tournament tables or on phones,
-individual/team events (pairs only today), masterpoints or league sanctioning,
+individual movements (pairs and team matches today — team matches shipped
+2026-08, so the page may now say so), masterpoints or league sanctioning,
 password reset (not wired up yet), or regularly scheduled house-run games
 (every event is player-hosted today; Denny plans house games once built out —
 add them to the page only when they actually run).
