@@ -64,12 +64,27 @@ bidding box, name bars, drawer dock, felt lobby cards). They were shot on an
 isolated staging node running the production code against a **copy of the
 live database**, so every score, field percentage, and traveller row is a
 real club result; the staging boards and the throwaway database were deleted
-after the shoot. The hero and phone shots are a **seated player's own view**:
+after the shoot. The hero shot is a **seated player's own view**:
 a temporary account ("Ellen") sat South with three bots, a script passed her
 auctions and played her lowest legal cards over the channel until a board
 mid-play with her on turn defending — her hand plus dummy, the gold your-turn
 nameplate, the Claim/Undo command bar, and a genuinely scored drawer
-("1 watching" is a real kibitzer, staged as "Margaret"). The captain-menu and
+("1 watching" is a real kibitzer, staged as "Margaret"). The two phone shots (`phone-table.jpg`, `phone-kibitz.jpg`) were retaken the
+evening of the same day, after the phone table overhaul (the four-tile strip,
+the auction band beneath it, dummy's cards on the felt) landed in app commit
+`a538cc0`. Same pipeline, fresh run: an isolated worktree node
+(`bridge_play-site`, port 4112) against a new same-day copy of the live
+database (`BridgeDB_shoot2`), Ellen South with three bots at "The Card Room"
+and Margaret the "1 watching" kibitzer; the table, node, database, and
+worktree were torn down as soon as the shots were taken. `phone-table.jpg` is
+Ellen's own view defending 2NT — dummy's cards fanned beside the trick, the
+full auction beneath the strip. `phone-kibitz.jpg` is Margaret's view of a
+later board at the same table: all four hands are face up because the table's
+kibitzers-see-all setting (a captain's choice, on by default) allows it, and
+the page's caption scopes the claim accordingly. The running-score
+percentages in both are real field results from the copied database.
+
+The captain-menu and
 settings shots are the captain's own view at a forming table; the traveller
 and replay panels are the drawer dock's own objects. `images/og-image.jpg` is
 a 1200×630 crop of the hero for link previews. The video-section "four
@@ -82,6 +97,7 @@ Don't claim: guest play without an account, bot difficulty levels (the two bots
 differ in speed, not strength), video at tournament tables or on phones,
 individual movements (pairs and team matches today — team matches shipped
 2026-08, so the page may now say so), masterpoints or league sanctioning,
-password reset (not wired up yet), or regularly scheduled house-run games
+password reset (not wired up yet), that kibitzers always see all four hands
+(it's a per-table setting — scope any such claim to tables that allow it), or regularly scheduled house-run games
 (every event is player-hosted today; Denny plans house games once built out —
 add them to the page only when they actually run).

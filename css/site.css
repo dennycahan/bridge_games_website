@@ -516,6 +516,12 @@ section h2 {
 }
 
 .phone-figure { margin: 0; }
+.phone-figure .phone-pair {
+  display: flex;
+  gap: 1.3rem;
+  justify-content: center;
+}
+.phone-figure .phone-pair img { width: min(300px, 48%); }
 .phone-figure img {
   width: min(300px, 80%);
   margin-inline: auto;
