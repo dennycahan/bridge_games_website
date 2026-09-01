@@ -10,6 +10,7 @@ css/site.css      styles (palette/type inherited from the app's design tokens)
 fonts/            Fraunces + Atkinson Hyperlegible, copied from the app's own
                   @fontsource packages (OFL-licensed, self-hosted)
 images/           app screenshots (see provenance below) + favicon.svg + og-image
+js/visit.js       GoatCounter's count.js, self-hosted (see "Visit counter")
 favicon.ico
 ```
 
@@ -55,6 +56,29 @@ Every call to action points into the app. If the app's address ever changes
 
 The footer/contact address is `hello@bridge.games` — the mailbox (or a forward)
 has to exist before launch.
+
+## Visit counter
+
+Every page carries GoatCounter (the hosted service, free non-commercial tier).
+The dashboard is `https://bridgegames.goatcounter.com` — visitors, pages,
+referrers, countries, browsers, screen sizes; sign in with the account that
+created it. It sets no cookies and stores no IP addresses, which is why the
+privacy page can still say "no cookies". The privacy page discloses the
+counter under "What we collect"; that disclosure stays as long as the snippet
+does.
+
+`js/visit.js` is GoatCounter's `count.js`, byte-for-byte below its header
+comment. It is self-hosted so the page loads no third-party script (the
+beacon to `bridgegames.goatcounter.com/count` is the only cross-origin
+request) and renamed so generic `/count.js` adblock rules don't match it. It
+is therefore pinned: if GoatCounter ever changes the script, fetch
+`https://gc.zgo.at/count.js` again and replace everything below the header.
+The snippet is the last thing before `</body>` on all three pages.
+
+Your own visits: open `https://bridge.games/#toggle-goatcounter` once and that
+browser is excluded (a localStorage flag, per browser); or list addresses
+under Settings on the dashboard. The script also skips localhost and private
+addresses, so a `python3 -m http.server` preview sends nothing.
 
 ## Screenshot provenance
 
