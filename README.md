@@ -117,6 +117,10 @@ stylized rather than a faked screenshot.
 
 ## Honesty guardrails for future copy
 
+The site says **beta** (the hero pill and the footer paragraph, added 2026-09-02),
+and the app's lobby says the same thing in the same words. Keep the two in step:
+drop both when Denny says the app has left beta, never one without the other.
+
 Don't claim: guest play without an account, bot difficulty levels (the two bots
 differ in speed, not strength), video at tournament tables or on phones,
 individual movements (pairs and team matches today — team matches shipped
