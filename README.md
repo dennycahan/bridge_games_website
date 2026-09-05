@@ -122,10 +122,19 @@ and the app's lobby says the same thing in the same words. Keep the two in step:
 drop both when Denny says the app has left beta, never one without the other.
 
 Don't claim: guest play without an account, bot difficulty levels (the two bots
-differ in speed, not strength), video at tournament tables or on phones,
-individual movements (pairs and team matches today — team matches shipped
-2026-08, so the page may now say so), masterpoints or league sanctioning,
-password reset (not wired up yet), that kibitzers always see all four hands
-(it's a per-table setting — scope any such claim to tables that allow it), or regularly scheduled house-run games
-(every event is player-hosted today; Denny plans house games once built out —
-add them to the page only when they actually run).
+differ in speed, not strength), video on phones, individual movements (pairs
+and team matches today — team matches shipped 2026-08, so the page may now say
+so), masterpoints or league sanctioning, that kibitzers always see all four
+hands (it's a per-table setting — scope any such claim to tables that allow
+it), that media never touches our servers (it goes peer to peer where the
+network allows and through our relay, still encrypted, where it doesn't — the
+privacy page has said so since 2026-09-01), that a browser only ever holds its
+own hand (dummy, a claim's responders, spectators at see-all tables, directors
+and the Double Dummy bot all see more, by the rules and the table's settings),
+or regularly scheduled house-run games (every event is player-hosted today;
+Denny plans house games once built out — add them to the page only when they
+actually run).
+
+Do say, when the copy touches them: tournament voice and video are the
+director's call (event switches, since 2026-08-18 — the tables are not
+"silent on purpose"), and password reset ships (by email, since 2026-08).
