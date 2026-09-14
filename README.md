@@ -43,7 +43,7 @@ host (GitHub Pages); the Mac serves only the app. The app lives at
 3. nginx `bridge-games.conf`, which lives in the app repo
    (`deploy/nginx/`) and is installed by its `scripts/prod.sh nginx`. The
    app repo's `docs/hosting.md` is the runbook for the Mac side: ports, TLS,
-   DNS, and the old `:5553` listener that is being retired.
+   DNS. (The old `:5553` port was retired outright on 2026-09-14.)
 
 ## App links on the page
 
