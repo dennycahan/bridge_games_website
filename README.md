@@ -31,28 +31,29 @@ custom-domain project page — must end up at the domain root), or an nginx `roo
 directive. There is no build step; publish the repo as-is.
 
 DNS plan (2026-08-14): the apex `bridge.games` points at the external static
-host (it cannot be served from the Mac — WAN 443 belongs to the Dinger API
-host). The app lives at `https://app.bridge.games:5553`, which needs, in order:
+host (GitHub Pages); the Mac serves only the app. The app lives at
+`https://app.bridge.games`, which needs:
 
-1. Squarespace DNS: `A app.bridge.games → 162.202.3.68` — **before** moving the
-   apex, so existing `bridge.games:5553` users have somewhere to land.
-2. Cert SAN on the Mac: `certbot ... -d bridge.games -d app.bridge.games`
-   (http-01 through the existing WAN-80 forward; the port-80 nginx server block
-   needs `app.bridge.games` in its `server_name` for the ACME webroot). After
-   the apex moves to the external host, renew with `-d app.bridge.games` only.
-3. nginx `bridge-games.conf`: add `app.bridge.games` to the 5553 TLS server's
-   `server_name`. Phoenix needs nothing while it runs dev mode
-   (`check_origin: false`); the prod cutover must add app.bridge.games to
-   `check_origin`.
+1. Squarespace DNS: `A app.bridge.games → 104.52.87.186` — the Mac's own
+   static address since the 2026-09-14 cutover (it was the house's dynamic
+   162.202.3.68 before).
+2. Cert on the Mac: `certbot ... -d app.bridge.games`, http-01 through the
+   WAN-80 forward. (The lineage is still named `bridge.games` from the days
+   it covered the apex too.)
+3. nginx `bridge-games.conf`, which lives in the app repo
+   (`deploy/nginx/`) and is installed by its `scripts/prod.sh nginx`. The
+   app repo's `docs/hosting.md` is the runbook for the Mac side: ports, TLS,
+   DNS, and the old `:5553` listener that is being retired.
 
 ## App links on the page
 
-Every call to action points into the app. If the app's address ever changes
-(e.g. dropping the port at the prod cutover), update these in `index.html`:
+Every call to action points into the app, on its portless origin (moved off
+`:5553` on 2026-09-14). If the app's address ever changes, update these in
+`index.html`, `privacy.html` and `terms.html`:
 
-- `https://app.bridge.games:5553/register` — "Create your free account" (×2), "Play free"
-- `https://app.bridge.games:5553/lobby` — "Open the lobby"
-- `https://app.bridge.games:5553/login` — "Log in"
+- `https://app.bridge.games/register` — "Create your free account" (×2), "Play free"
+- `https://app.bridge.games/lobby` — "Open the lobby"
+- `https://app.bridge.games/login` — "Log in"
 
 The footer/contact address is `hello@bridge.games` — the mailbox (or a forward)
 has to exist before launch.
