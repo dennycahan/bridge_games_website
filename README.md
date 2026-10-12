@@ -79,6 +79,15 @@ is therefore pinned: if GoatCounter ever changes the script, fetch
 `https://gc.zgo.at/count.js` again and replace everything below the header.
 The snippet is the last thing before `</body>` on all three pages.
 
+Sign-up clicks are GoatCounter events: every link to `/register` carries
+`data-goatcounter-click`, named for where it sits — `signup-header`,
+`signup-hero`, `signup-closing` on the home page, `signup-privacy` and
+`signup-terms` on the doc pages. They show on the dashboard as their own rows,
+and an event's referrer is the page visit's referrer (Bing, Google, …), so
+each row tells you which source sent the people who clicked. A new link to
+`/register` gets its own name; the privacy page says sign-up clicks are counted,
+so tag no other kind of click without changing that sentence too.
+
 Your own visits: open `https://bridge.games/#toggle-goatcounter` once and that
 browser is excluded (a localStorage flag, per browser); or list addresses
 under Settings on the dashboard. The script also skips localhost and private
