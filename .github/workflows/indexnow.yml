@@ -1,0 +1,23 @@
+name: IndexNow
+
+# After a push that changes a page, wait for GitHub Pages to serve it, then
+# ask Bing (and the engines that share IndexNow) to recrawl just those pages.
+# "Run workflow" on the Actions tab submits all three.
+on:
+  push:
+    branches: [main]
+    paths: [index.html, privacy.html, terms.html]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - run: scripts/indexnow.sh ${{ github.event.before }}

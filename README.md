@@ -15,6 +15,8 @@ favicon.ico       16/32/48 spade, same drawing as images/favicon.svg
 apple-touch-icon.png  180×180, square (iOS rounds the corners itself)
 robots.txt        allows everything, points at the sitemap
 sitemap.xml       the three pages; bump a <lastmod> when its page changes
+7f195cac….txt     IndexNow key (see "Search"); public by design, keep it
+scripts/indexnow.sh, .github/workflows/indexnow.yml   IndexNow pings
 ```
 
 ## Preview locally
@@ -113,6 +115,17 @@ computer". So:
   "bridge.games" as the site name. There's no SoftwareApplication block on
   purpose: Google treats one without ratings as an error, and we have no
   ratings to give it.
+- Bing sends nearly all our search traffic, counting Yahoo, DuckDuckGo and
+  Copilot, which search its index (GoatCounter, Sept–Oct 2026: 63 of 70
+  search visits; Google 6). So every page change is pushed to Bing through
+  IndexNow instead of waiting for a recrawl: on a push to main that touches
+  `index.html`, `privacy.html` or `terms.html`, the IndexNow workflow waits
+  until Pages serves the committed bytes, then submits just the changed
+  pages. Its runs are on the repo's Actions tab, and Bing Webmaster Tools →
+  IndexNow lists what arrived. "Run workflow" there, or
+  `scripts/indexnow.sh` by hand, submits all three. The key is the root
+  `<32 hex>.txt` file, which IndexNow fetches to check that we own the site.
+  It's public on purpose; replacing it just means committing a new one.
 - The favicon is a gold spade on felt, drawn for this site on 2026-10-12. The
   app still carries Vite's default lightning bolt in
   `frontend/public/favicon.svg`; the site no longer does.
