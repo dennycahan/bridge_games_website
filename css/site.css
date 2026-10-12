@@ -545,6 +545,34 @@ section h2 {
 }
 .phone-figure figcaption { text-align: center; }
 
+/* ---------- questions (alert section) ---------- */
+
+.bid-card.alert {
+  color: var(--card-red);
+  font-size: 0.92rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.faq {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.9rem 3.4rem;
+  margin: 2.3rem 0 0;
+}
+.faq dt {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  margin: 0 0 0.4rem;
+}
+.faq dd {
+  margin: 0;
+  color: var(--cream-soft);
+  font-size: 1.02rem;
+}
+
 /* ---------- closing CTA ---------- */
 
 .closing {
@@ -621,6 +649,7 @@ section h2 {
 @media (max-width: 620px) {
   body { font-size: 1.06rem; }
   .grid { grid-template-columns: 1fr; }
+  .faq { grid-template-columns: 1fr; }
   section { padding: 3.4rem 0; }
   .hero { padding: 2.2rem 0 3.4rem; }
   .hero-sub { font-size: 1.12rem; }

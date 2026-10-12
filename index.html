@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>bridge.games — free, unlimited bridge with real faces at the table</title>
-  <meta name="description" content="Play free, unlimited contract bridge online: video and voice at the table, bots for any empty seat, tournaments anyone can host. No downloads, no fees.">
+  <title>Play Free Bridge Online — No Download | bridge.games</title>
+  <meta name="description" content="Play free, unlimited contract bridge online — against the computer or with friends on video and voice, plus tournaments anyone can host. No downloads, no fees.">
   <link rel="canonical" href="https://bridge.games/">
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="bridge.games">
   <meta property="og:title" content="bridge.games — free, unlimited bridge with real faces at the table">
@@ -15,6 +16,28 @@
   <meta property="og:url" content="https://bridge.games/">
   <meta property="og:image" content="https://bridge.games/images/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://bridge.games/#website",
+        "name": "bridge.games",
+        "url": "https://bridge.games/",
+        "publisher": { "@id": "https://bridge.games/#org" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://bridge.games/#org",
+        "name": "bridge.games",
+        "url": "https://bridge.games/",
+        "logo": "https://bridge.games/apple-touch-icon.png",
+        "email": "hello@bridge.games"
+      }
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
@@ -48,7 +71,7 @@
           <a href="https://app.bridge.games/lobby">Open the lobby</a></span>
       </div>
       <figure class="hero-figure">
-        <img src="/images/hero-table.jpg"
+        <img src="/images/hero-table.jpg" fetchpriority="high"
              alt="Your seat at a bridge.games table, mid-hand: your cards fanned at the bottom, dummy laid out across the table, two cards in the trick and it's your play, with six scored boards in the side drawer and one kibitzer watching"
              width="3200" height="2000">
         <figcaption>Your seat, your play &mdash; the session scored board by board in the drawer,
@@ -74,7 +97,8 @@
         <div class="card">
           <h3>Never wait for a fourth</h3>
           <p>A capable bot takes any empty chair the moment you ask, plays at a human
-          pace, and gives the seat back just as easily. And when your bot partner wins
+          pace, and gives the seat back just as easily &mdash; fill all three and
+          you&rsquo;re playing against the computer. And when your bot partner wins
           the auction, you can play the hand.</p>
         </div>
         <div class="card">
@@ -100,7 +124,7 @@
         </div>
       </div>
       <figure class="craft-figure">
-        <img src="/images/bidding-box.jpg"
+        <img loading="lazy" decoding="async" src="/images/bidding-box.jpg"
              alt="Mid-auction at your turn: the auction pad on the felt records every call, and the bidding box below it offers a level, then a strain, with pass, double, and an alert button at hand"
              width="1400" height="1500">
         <figcaption>Two taps and your call is made &mdash; pick a level, then a strain
@@ -188,7 +212,7 @@
           </ul>
         </div>
         <figure class="split-media">
-          <img src="/images/lobby-stats.jpg"
+          <img loading="lazy" decoding="async" src="/images/lobby-stats.jpg"
                alt="The bridge.games lobby: live tables with every seat shown and one seat open to take, an upcoming matchpoint pairs event open for entries, and buttons to create a table, host a tournament, or set up a team match"
                width="2300" height="1220">
           <figcaption>The lobby: what&rsquo;s live, who has a seat open, the next event
@@ -225,14 +249,14 @@
             the command bar (undos still ask your opponents&rsquo; consent).</li>
           </ul>
           <figure class="ui-snippet">
-            <img src="/images/captain-menu.jpg"
+            <img loading="lazy" decoding="async" src="/images/captain-menu.jpg"
                  alt="The captain's menu, opened from the anchor button: skip board, fill seats with bots with the bot list open beside it, view log, remove kibitzer, table settings"
                  width="800" height="520">
             <figcaption>The captain&rsquo;s menu &mdash; one anchor tap away.</figcaption>
           </figure>
         </div>
         <figure class="split-media">
-          <img src="/images/table-settings.jpg"
+          <img loading="lazy" decoding="async" src="/images/table-settings.jpg"
                alt="The table settings card: scoring against every table that plays the same board, private, rated, allow undos, play the hand when your bot partner declares, voice, video, and kibitzer permissions, with a Save settings button"
                width="864" height="1244">
           <figcaption>The table settings card &mdash; the whole rulebook on one page,
@@ -275,7 +299,7 @@
             where partners could trade more than bids.</li>
           </ul>
           <figure class="ui-snippet wide">
-            <img src="/images/traveller.jpg"
+            <img loading="lazy" decoding="async" src="/images/traveller.jpg"
                  alt="The traveller panel for one board: every table's result with contract, score, and matchpoint percentage"
                  width="702" height="396">
             <figcaption>The traveller &mdash; every table that held your cards,
@@ -283,7 +307,7 @@
           </figure>
         </div>
         <figure class="split-media">
-          <img src="/images/replay-panel.jpg"
+          <img loading="lazy" decoding="async" src="/images/replay-panel.jpg"
                alt="The replay panel for a finished board: the contract and result, the full deal diagram, and the complete auction, ready to step through card by card"
                width="702" height="1052">
           <figcaption>After the hand: the deal, the auction, your score against the field
@@ -323,10 +347,10 @@
         </div>
         <figure class="split-media phone-figure">
           <div class="phone-pair">
-            <img src="/images/phone-table.jpg"
+            <img loading="lazy" decoding="async" src="/images/phone-table.jpg"
                  alt="Your seat on a phone, mid-play: the board, contract, trick count, and your running score in a strip up top, the full auction beneath it, dummy's cards fanned beside the trick, and your own hand at the bottom with the claim and undo controls"
                  width="1170" height="2532">
-            <img src="/images/phone-kibitz.jpg"
+            <img loading="lazy" decoding="async" src="/images/phone-kibitz.jpg"
                  alt="Kibitzing from a phone: the kibitzing badge in the header, all four hands face up around the trick, and the auction and score strip above them"
                  width="1170" height="2532">
           </div>
@@ -336,6 +360,54 @@
           whole deal is face up. Cards-only: video stays on bigger screens.</figcaption>
         </figure>
       </div>
+    </div>
+  </section>
+
+  <!-- ======================= alert: questions ======================= -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="bid-eyebrow">
+        <span class="bid-card alert">Alert</span>
+        <span class="bid-label">Questions, explained</span>
+      </div>
+      <h2>Fair questions, straight answers.</h2>
+      <dl class="faq">
+        <div>
+          <dt>Is it really free?</dt>
+          <dd>Yes. No subscription, no deal limits, nothing extra for bots, tournaments,
+          or video. A free account is all we ask for.</dd>
+        </div>
+        <div>
+          <dt>Is there anything to download?</dt>
+          <dd>No. bridge.games runs in your web browser on a computer, tablet, or phone
+          &mdash; nothing to install, nothing to update. Video and voice need a computer
+          or tablet; phones play cards-only.</dd>
+        </div>
+        <div>
+          <dt>Can I play bridge against the computer?</dt>
+          <dd>Yes. Open a table and put a bot in each of the other three seats &mdash;
+          your partner and both opponents &mdash; and you&rsquo;re playing in seconds,
+          any hour of the day. Or mix and match: one bot to make a fourth, two to make
+          up a table with a friend.</dd>
+        </div>
+        <div>
+          <dt>Do I need an account?</dt>
+          <dd>Yes, a free one: a username, an email, and a password, and you&rsquo;re in
+          the lobby in under a minute. Your account is what keeps every hand you play
+          and scores it against the field.</dd>
+        </div>
+        <div>
+          <dt>Can I play with my friends?</dt>
+          <dd>Yes. Open a table, invite them by name, and turn on cameras if you like.
+          Or host a tournament for your whole crowd.</dd>
+        </div>
+        <div>
+          <dt>Is it duplicate bridge?</dt>
+          <dd>Yes. Every board, at a casual table or in a tournament, is scored against
+          everyone on the site who played the same cards &mdash; matchpoints or IMPs
+          &mdash; and kept for replay.</dd>
+        </div>
+      </dl>
     </div>
   </section>
 

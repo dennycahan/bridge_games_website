@@ -11,7 +11,10 @@ fonts/            Fraunces + Atkinson Hyperlegible, copied from the app's own
                   @fontsource packages (OFL-licensed, self-hosted)
 images/           app screenshots (see provenance below) + favicon.svg + og-image
 js/visit.js       GoatCounter's count.js, self-hosted (see "Visit counter")
-favicon.ico
+favicon.ico       16/32/48 spade, same drawing as images/favicon.svg
+apple-touch-icon.png  180×180, square (iOS rounds the corners itself)
+robots.txt        allows everything, points at the sitemap
+sitemap.xml       the three pages; bump a <lastmod> when its page changes
 ```
 
 ## Preview locally
@@ -80,6 +83,30 @@ Your own visits: open `https://bridge.games/#toggle-goatcounter` once and that
 browser is excluded (a localStorage flag, per browser); or list addresses
 under Settings on the dashboard. The script also skips localhost and private
 addresses, so a `python3 -m http.server` preview sends nothing.
+
+## Search
+
+The site is verified in Google Search Console and Bing Webmaster Tools;
+submit `https://bridge.games/sitemap.xml` to both. The queries that find us
+(2026-10) are the searcher's words, not ours: "free bridge", "bridge for
+free", "free bridge games no download", "play bridge online free against
+computer". So:
+
+- The `<title>` and meta description speak search ("Play Free Bridge Online
+  — No Download", "against the computer"); `og:title`/`og:description` keep
+  the brand voice ("real faces at the table") for link previews. Keep the
+  description under 160 characters.
+- The Alert section (`#faq`) answers those queries in plain text, which
+  is most of what lets the page rank for them. Its answers sit under the
+  honesty guardrails below like any other copy, and "Do I need an account?"
+  stays yes until guest play exists.
+- The JSON-LD in `index.html` is WebSite + Organization only, so Google shows
+  "bridge.games" as the site name. There's no SoftwareApplication block on
+  purpose: Google treats one without ratings as an error, and we have no
+  ratings to give it.
+- The favicon is a gold spade on felt, drawn for this site on 2026-10-12. The
+  app still carries Vite's default lightning bolt in
+  `frontend/public/favicon.svg`; the site no longer does.
 
 ## Screenshot provenance
 
