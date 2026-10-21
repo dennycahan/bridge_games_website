@@ -3,7 +3,7 @@
 # takes the submission and shares it with the other IndexNow engines; Yahoo,
 # DuckDuckGo and Copilot search Bing's index, so they follow.
 #
-#   scripts/indexnow.sh           submit all three pages
+#   scripts/indexnow.sh           submit all four pages
 #   scripts/indexnow.sh <commit>  submit only pages whose file changed since <commit>
 #
 # .github/workflows/indexnow.yml runs it on every push to main that touches a
@@ -18,12 +18,13 @@ key=$(git ls-files | grep -E '^[0-9a-f]{32}\.txt$' | sed 's/\.txt$//' || true)
 url_for() {
   case "$1" in
     index.html)   echo "https://$host/" ;;
+    clubs.html)   echo "https://$host/clubs" ;;
     privacy.html) echo "https://$host/privacy" ;;
     terms.html)   echo "https://$host/terms" ;;
   esac
 }
 
-pages="index.html privacy.html terms.html"
+pages="index.html clubs.html privacy.html terms.html"
 if [ -n "${1:-}" ] && git cat-file -e "$1^{commit}" 2>/dev/null; then
   pages=$(git diff --name-only "$1" HEAD -- $pages)
 fi
