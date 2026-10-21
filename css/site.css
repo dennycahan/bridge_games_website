@@ -387,6 +387,8 @@ a.zoom img { width: 100%; }
   margin-top: 3rem;
 }
 .figure-pair figure { margin: 0; }
+/* a pair of dialog halves under a section: narrower, centred */
+.figure-pair.narrow { max-width: 860px; margin-inline: auto; }
 .figure-pair img {
   border-radius: 12px;
   border: 1px solid rgba(0, 0, 0, 0.5);

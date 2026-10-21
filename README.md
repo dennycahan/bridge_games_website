@@ -202,7 +202,8 @@ after the shoot.
   locked with Ask), a booked table, a scheduled event with a description,
   the lounge bar closed; the "8 online" are the staged accounts' live
   connections.
-- `create-table.jpg`, `host-tournament.jpg` (the dialog's top 1360 px),
+- `create-table.jpg`, `host-tournament.jpg` and `host-tournament-settings.jpg`
+  (the dialog's top 1360 px and its remaining 1308 px, shown side by side),
   `captain-menu.jpg`, `traveller.jpg` (board 1's field, 12 results),
   `replay-panel.jpg` (the defeated slam), `event-page.jpg` (a spectator's
   view of round 2), `event-director.jpg` (the director's), `event-score.jpg`
