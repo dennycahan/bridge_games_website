@@ -393,6 +393,19 @@ a.zoom img { width: 100%; }
   box-shadow: 0 0 0 1px rgba(243, 236, 216, 0.08), 0 18px 40px rgba(0, 0, 0, 0.5);
 }
 
+/* a centred portrait figure under a section (the Host a tournament dialog) */
+.craft-figure {
+  margin: 3rem auto 0;
+  max-width: 380px;
+  text-align: center;
+}
+.craft-figure img {
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 1px rgba(243, 236, 216, 0.08), 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+.craft-figure figcaption { margin-top: 1rem; }
+
 /* a tall dialog or page beside the copy: narrower, so it does not tower */
 .split-media.portrait { max-width: 360px; width: 100%; justify-self: center; }
 
