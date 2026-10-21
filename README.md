@@ -205,11 +205,18 @@ after the shoot.
 - `create-table.jpg`, `host-tournament.jpg` (the dialog's top 1360 px),
   `captain-menu.jpg`, `traveller.jpg` (board 1's field, 12 results),
   `replay-panel.jpg` (the defeated slam), `event-page.jpg` (a spectator's
-  view of round 2), `event-director.jpg` (the director's), `event-table.jpg`
-  (Ellen's seat in round 2), `club-page.jpg` (`og-clubs.jpg` is its top
-  1200×630), `club-invite.jpg` (Preview only; nothing sent),
-  `phone-table.jpg`/`phone-kibitz.jpg` (390×844 WebKit at 3×; the kibitz
-  shot is at a see-all table, and the caption is scoped to that).
+  view of round 2), `event-director.jpg` (the director's), `event-score.jpg`
+  (the score pad at Ellen's seat in round 2, cropped from her table),
+  `club-page.jpg` (`og-clubs.jpg` is its top 1200×630), `club-invite.jpg`
+  (Preview only; nothing sent), `phone-table.jpg`/`phone-kibitz.jpg`
+  (390×844 WebKit at 3×; the kibitz shot is at a see-all table, and the
+  caption is scoped to that).
+- `replay-table.jpg` (3200×2000) and `bookmarked-boards.jpg`: a second,
+  shorter run of the same pipeline the same afternoon (`BridgeDB_shoot4`),
+  replaying one of Ellen's own real August hands (2♠ by East at a Thursday
+  club table, the field's 55 results untouched) from the 17th card at a
+  private replay table with Double Dummy bots, after starring it with a
+  note; the replay was held, so no bot played a card.
 - Retired 2026-10-21: `table-settings.jpg` (the Create a table dialog shows
   the same settings list). The video section's "four corners" figure is
   still a CSS illustration (bots have no cameras).

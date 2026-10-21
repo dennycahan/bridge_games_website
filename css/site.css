@@ -230,10 +230,10 @@ p:last-child { margin-bottom: 0; }
 }
 .hero-aside a { color: var(--cream-soft); }
 
-.hero-figure {
+.hero-figure, .wide-figure {
   margin: 3.2rem 0 0;
 }
-.hero-figure img {
+.hero-figure img, .wide-figure img {
   width: 100%;
   border-radius: 14px;
   border: 1px solid rgba(0, 0, 0, 0.55);
@@ -376,7 +376,7 @@ section h2 {
    link carries the width; the image keeps the frame. */
 a.zoom { display: block; cursor: zoom-in; border-radius: 12px; }
 a.zoom img { width: 100%; }
-.hero-figure a.zoom { border-radius: 14px; }
+.hero-figure a.zoom, .wide-figure a.zoom { border-radius: 14px; }
 
 /* two figures side by side under the feature grid (the lobby and the bidding box) */
 .figure-pair {
