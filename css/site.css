@@ -1,6 +1,9 @@
 /* bridge.games — marketing site
    Palette, type, and vernacular are inherited from the app itself:
-   felt greens, ivory card stock, brass, Fraunces + Atkinson Hyperlegible. */
+   felt greens, ivory card stock, brass, Fraunces + Atkinson Hyperlegible.
+   Type runs large on purpose (20px body on a desktop, 18px on a phone,
+   nothing that matters under 16px): many of the people who play are older,
+   and the page should be as easy to read as the cards are. */
 
 /* ---------- fonts (self-hosted, copied from the app's own packages) ---------- */
 
@@ -34,8 +37,8 @@
   --baize: #2b7c50;
 
   --cream: #f3ecd8;
-  --cream-soft: rgba(243, 236, 216, 0.78);
-  --cream-dim: rgba(243, 236, 216, 0.55);
+  --cream-soft: rgba(243, 236, 216, 0.82);
+  --cream-dim: rgba(243, 236, 216, 0.62);
   --hairline: rgba(243, 236, 216, 0.16);
 
   --gold: #c9a648;
@@ -48,8 +51,8 @@
   --body: 'Atkinson Hyperlegible', Verdana, sans-serif;
   --mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 
-  --measure: 66ch;
-  --col: 1100px;
+  --measure: 64ch;
+  --col: 1140px;
 }
 
 /* ---------- base ---------- */
@@ -61,8 +64,8 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: var(--body);
-  font-size: 1.125rem;
-  line-height: 1.65;
+  font-size: 1.25rem;
+  line-height: 1.6;
   color: var(--cream);
   background:
     radial-gradient(110rem 70rem at 50% -18%, var(--felt-700), var(--felt-900) 55%, var(--felt-950) 100%)
@@ -109,7 +112,7 @@ p:last-child { margin-bottom: 0; }
 .wordmark {
   font-family: var(--display);
   font-weight: 640;
-  font-size: 1.55rem;
+  font-size: 1.6rem;
   letter-spacing: 0.01em;
   color: var(--cream);
   text-decoration: none;
@@ -130,12 +133,12 @@ p:last-child { margin-bottom: 0; }
 }
 /* Log in and For clubs: text links beside the button. Log in shows at
    every width (phones included, since 2026-10-21); For clubs yields to the
-   footer and the 5C section on phones. The block padding makes the tap
+   footer and the clubs section on phones. The block padding makes the tap
    target close to 44px tall without changing the line. */
 .head-link {
   color: var(--cream-soft);
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.05rem;
   white-space: nowrap;
   padding-block: 0.55rem;
 }
@@ -148,7 +151,7 @@ p:last-child { margin-bottom: 0; }
   display: inline-block;
   font-family: var(--body);
   font-weight: 700;
-  font-size: 1.06rem;
+  font-size: 1.15rem;
   line-height: 1;
   text-decoration: none;
   border-radius: 999px;
@@ -166,7 +169,7 @@ p:last-child { margin-bottom: 0; }
 }
 .btn:active { transform: translateY(0); }
 
-.btn-small { padding: 0.72em 1.25em; font-size: 0.98rem; }
+.btn-small { padding: 0.72em 1.25em; font-size: 1.05rem; }
 
 /* ---------- hero ---------- */
 
@@ -174,8 +177,8 @@ p:last-child { margin-bottom: 0; }
 
 .hero-eyebrow {
   font-family: var(--mono);
-  font-size: 0.82rem;
-  letter-spacing: 0.16em;
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold-bright);
   margin: 0 0 1.4rem;
@@ -190,7 +193,7 @@ p:last-child { margin-bottom: 0; }
   padding: 0.15rem 0.6rem 0.1rem;
   border: 1px solid currentColor;
   border-radius: 999px;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   letter-spacing: 0.14em;
   vertical-align: 0.1em;
 }
@@ -198,7 +201,7 @@ p:last-child { margin-bottom: 0; }
 .hero h1 {
   font-family: var(--display);
   font-weight: 560;
-  font-size: clamp(2.5rem, 6.2vw, 4.35rem);
+  font-size: clamp(2.6rem, 6.2vw, 4.4rem);
   line-height: 1.06;
   letter-spacing: -0.012em;
   margin: 0 0 1.4rem;
@@ -211,9 +214,9 @@ p:last-child { margin-bottom: 0; }
 }
 
 .hero-sub {
-  font-size: 1.22rem;
+  font-size: 1.35rem;
   color: var(--cream-soft);
-  max-width: 56ch;
+  max-width: 58ch;
   margin-bottom: 2.1rem;
 }
 
@@ -225,7 +228,7 @@ p:last-child { margin-bottom: 0; }
   margin-bottom: 1.1rem;
 }
 .hero-aside {
-  font-size: 0.98rem;
+  font-size: 1.05rem;
   color: var(--cream-dim);
 }
 .hero-aside a { color: var(--cream-soft); }
@@ -241,16 +244,61 @@ p:last-child { margin-bottom: 0; }
     0 0 0 1px rgba(243, 236, 216, 0.08),
     0 30px 70px rgba(0, 0, 0, 0.55);
 }
+/* Captions are set in the body face, not the monospace, so they read as
+   easily as the copy; the eyebrow labels keep the monospace as a label. */
 figcaption {
-  font-family: var(--mono);
-  font-size: 0.8rem;
-  letter-spacing: 0.04em;
+  font-size: 1rem;
+  line-height: 1.5;
   color: var(--cream-dim);
   margin-top: 0.9rem;
 }
 
+/* ---------- free means free: the band under the hero ---------- */
+
+.free-band {
+  padding: 2.8rem 0;
+  text-align: center;
+  background: rgba(243, 236, 216, 0.035);
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+}
+.free-band h2 {
+  margin: 0 auto 1rem;
+  max-width: none;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+}
+.free-points {
+  list-style: none;
+  margin: 0 auto 1.2rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem 0.9rem;
+}
+.free-points li {
+  font-weight: 700;
+  font-size: 1.12rem;
+  line-height: 1;
+  color: var(--ink);
+  background: linear-gradient(180deg, #faf5e6, #ece2c6);
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  border-radius: 999px;
+  padding: 0.6em 1.15em 0.55em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+}
+.free-band p {
+  max-width: 56ch;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  color: var(--cream-soft);
+}
+
 /* ---------- sections & the ascending-auction markers ---------- */
 
+/* The bid cards walk up the auction in bridge order, one step a section:
+   1♣ 1♦ 1♥ 1♠ 1NT 2♣ 2♦ 2♥ …, then Alert for the questions. Never skip
+   a step and never repeat one. */
 section { padding: 4.6rem 0; }
 
 .bid-eyebrow {
@@ -262,7 +310,7 @@ section { padding: 4.6rem 0; }
 .bid-card {
   font-family: var(--display);
   font-weight: 620;
-  font-size: 1.06rem;
+  font-size: 1.15rem;
   line-height: 1;
   color: var(--ink);
   background: linear-gradient(180deg, #faf5e6, #ece2c6);
@@ -276,8 +324,8 @@ section { padding: 4.6rem 0; }
 .bid-card .r { color: var(--card-red); }
 .bid-label {
   font-family: var(--mono);
-  font-size: 0.8rem;
-  letter-spacing: 0.16em;
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--cream-dim);
 }
@@ -285,7 +333,7 @@ section { padding: 4.6rem 0; }
 section h2 {
   font-family: var(--display);
   font-weight: 560;
-  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  font-size: clamp(1.95rem, 3.8vw, 2.75rem);
   line-height: 1.12;
   letter-spacing: -0.008em;
   margin: 0 0 1.1rem;
@@ -293,7 +341,7 @@ section h2 {
 }
 
 .lede {
-  font-size: 1.14rem;
+  font-size: 1.22rem;
   color: var(--cream-soft);
   max-width: var(--measure);
 }
@@ -316,14 +364,38 @@ section h2 {
 .card h3 {
   font-family: var(--display);
   font-weight: 600;
-  font-size: 1.28rem;
+  font-size: 1.38rem;
   line-height: 1.2;
   margin: 0 0 0.55rem;
 }
 .card p {
-  font-size: 1rem;
+  font-size: 1.08rem;
   color: var(--cream-soft);
   margin: 0;
+}
+/* Each card is a link down to the section that explains it. */
+a.card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+a.card:hover, a.card:focus-visible {
+  color: inherit;
+  border-top-color: var(--gold-bright);
+  background: linear-gradient(180deg, rgba(243, 236, 216, 0.08), rgba(243, 236, 216, 0.03));
+  transform: translateY(-2px);
+}
+a.card h3 { color: var(--cream); }
+a.card::after {
+  content: 'Read more \2193';
+  display: block;
+  margin-top: 0.9rem;
+  font-family: var(--mono);
+  font-size: 0.88rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
 }
 
 /* ---------- split sections ---------- */
@@ -336,6 +408,9 @@ section h2 {
   margin-top: 1rem;
 }
 .split.flip { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+/* Beside a tall dialog, page or menu the copy starts at the top, so the
+   heading stays next to its bid card instead of floating halfway down. */
+.split:has(.portrait), .split:has(.menu) { align-items: start; }
 .split.flip .split-copy { order: 2; }
 .split.flip .split-media { order: 1; }
 
@@ -351,13 +426,13 @@ section h2 {
   padding: 0;
   margin: 1.6rem 0 0;
   display: grid;
-  gap: 0.85rem;
+  gap: 0.9rem;
 }
 .ticklist li {
   padding-left: 1.75rem;
   position: relative;
   color: var(--cream-soft);
-  font-size: 1.03rem;
+  font-size: 1.1rem;
 }
 .ticklist li::before {
   content: '♦';
@@ -369,6 +444,7 @@ section h2 {
 }
 .ticklist.spades li::before { content: '♠'; color: var(--gold); }
 .ticklist.hearts li::before { content: '♥'; color: var(--gold); }
+.ticklist.clubs li::before { content: '♣'; color: var(--gold); }
 .ticklist strong { color: var(--cream); }
 
 /* Every screenshot sits in <a class="zoom">: a tap opens it whole
@@ -395,21 +471,10 @@ a.zoom img { width: 100%; }
   box-shadow: 0 0 0 1px rgba(243, 236, 216, 0.08), 0 18px 40px rgba(0, 0, 0, 0.5);
 }
 
-/* a centred portrait figure under a section (the Host a tournament dialog) */
-.craft-figure {
-  margin: 3rem auto 0;
-  max-width: 380px;
-  text-align: center;
-}
-.craft-figure img {
-  border-radius: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 0 1px rgba(243, 236, 216, 0.08), 0 18px 40px rgba(0, 0, 0, 0.5);
-}
-.craft-figure figcaption { margin-top: 1rem; }
-
 /* a tall dialog or page beside the copy: narrower, so it does not tower */
 .split-media.portrait { max-width: 360px; width: 100%; justify-self: center; }
+/* a menu beside the copy (the chat's To menu): narrower still */
+.split-media.menu { max-width: 300px; width: 100%; justify-self: center; }
 
 /* small in-copy UI fragment (e.g. the captain's menu) */
 .ui-snippet { margin: 1.9rem 0 0; }
@@ -421,7 +486,7 @@ a.zoom img { width: 100%; }
 }
 /* the traveller's table needs a little more width to stay legible */
 .ui-snippet.wide a.zoom { width: min(380px, 100%); }
-/* a tall fragment (the To menu, an event table) stays narrow */
+/* a tall fragment stays narrow */
 .ui-snippet.tall a.zoom { width: min(260px, 100%); }
 
 /* the tablet figure: a dark bezel drawn in CSS around a real screenshot */
@@ -435,37 +500,39 @@ a.zoom img { width: 100%; }
 .tablet a.zoom, .tablet img { border-radius: clamp(6px, 1vw, 12px); }
 .tablet img { border: 0; box-shadow: none; }
 
-/* the three card sizes, side by side */
-.size-strip { margin: 3rem 0 0; }
-.size-steps {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.15rem;
-}
-.size-steps a.zoom, .size-steps img { border-radius: 10px; }
-.size-steps img {
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 0 1px rgba(243, 236, 216, 0.08), 0 14px 34px rgba(0, 0, 0, 0.45);
-}
-.size-name {
-  display: block;
-  margin-top: 0.7rem;
-  text-align: center;
-  font-family: var(--mono);
-  font-size: 0.8rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--gold-bright);
-}
-.size-strip figcaption { text-align: center; margin-top: 1.2rem; }
-
-/* the clubs sections */
-.ticklist.clubs li::before { content: '♣'; color: var(--gold); }
 .more-link { display: inline-block; margin-top: 1.6rem; font-weight: 700; text-decoration: none; }
 .more-link:hover { text-decoration: underline; }
+
+/* ---------- from the dealer: the signed note ---------- */
+
+.note-band {
+  padding: 4.4rem 0;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(201, 166, 72, 0.09), rgba(201, 166, 72, 0.02));
+  border-top: 1px solid rgba(201, 166, 72, 0.28);
+  border-bottom: 1px solid rgba(201, 166, 72, 0.28);
+}
+.note-band .wrap { max-width: 46rem; }
+.note-eyebrow {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  margin: 0 0 1rem;
+}
+.note-band h2 { margin: 0 auto 1.3rem; max-width: none; }
+.note-band p {
+  font-size: 1.25rem;
+  color: var(--cream-soft);
+}
+.note-sign {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--gold-bright);
+  margin-top: 1.3rem;
+}
 
 /* the enlarged screenshot (js/zoom.js) */
 .zoom-box {
@@ -509,102 +576,7 @@ html.zoom-open { overflow: hidden; }
   @keyframes zoom-fade { from { opacity: 0; } }
 }
 
-/* ---------- the table diagram (A/V signature) ---------- */
-
-.av-scene {
-  position: relative;
-}
-.av-table {
-  position: relative;
-  margin: 52px 64px;
-  background: linear-gradient(180deg, #59371f, #3a2213);
-  border-radius: 22px;
-  padding: 26px;
-  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(0, 0, 0, 0.5);
-}
-.av-felt {
-  background: radial-gradient(90% 90% at 50% 30%, var(--felt-500), var(--felt-700));
-  border-radius: 12px;
-  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.45);
-  aspect-ratio: 1.16;
-  display: grid;
-  place-items: center;
-}
-.av-felt .fan {
-  font-size: 2rem;
-  letter-spacing: 0.28em;
-  text-indent: 0.28em;
-  color: rgba(243, 236, 216, 0.85);
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-}
-.av-felt .fan .r { color: #e98d80; }
-
-.av-tile {
-  position: absolute;
-  z-index: 1;
-  width: 118px;
-  background: #12271e;
-  border: 1px solid rgba(243, 236, 216, 0.22);
-  border-radius: 10px;
-  padding: 0.6rem 0.6rem 0.5rem;
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.5);
-  text-align: center;
-}
-.av-tile .face {
-  width: 52px;
-  height: 52px;
-  margin: 0 auto 0.45rem;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-family: var(--display);
-  font-weight: 620;
-  font-size: 1.25rem;
-  color: var(--ink);
-}
-.av-tile .who {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--cream);
-  line-height: 1.2;
-}
-.av-tile .state {
-  font-family: var(--mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.08em;
-  color: var(--cream-dim);
-  margin-top: 0.15rem;
-}
-.av-tile.nw { top: 0; left: 0; }
-.av-tile.ne { top: 0; right: 0; }
-.av-tile.sw { bottom: 0; left: 0; }
-.av-tile.se { bottom: 0; right: 0; }
-
-.av-tile.speaking { border-color: var(--gold); }
-.av-tile.speaking .face { box-shadow: 0 0 0 3px var(--gold); }
-@media (prefers-reduced-motion: no-preference) {
-  .av-tile.speaking .face { animation: speak 2.2s ease-in-out infinite; }
-  @keyframes speak {
-    0%, 100% { box-shadow: 0 0 0 3px var(--gold); }
-    50% { box-shadow: 0 0 0 6px rgba(201, 166, 72, 0.55); }
-  }
-}
-
-.f1 { background: #d9b08c; }
-.f2 { background: #a8c3a0; }
-.f3 { background: #cfa0a5; }
-.f4 { background: #b9b0d8; }
-
-.av-note {
-  font-family: var(--mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.05em;
-  color: var(--cream-dim);
-  text-align: center;
-  margin-top: 1.1rem;
-}
-
-/* ---------- steps (NT section) ---------- */
+/* ---------- steps (how to start) ---------- */
 
 .steps {
   counter-reset: step;
@@ -633,7 +605,7 @@ html.zoom-open { overflow: hidden; }
   place-items: center;
   font-family: var(--display);
   font-weight: 620;
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   color: var(--cream);
   background: radial-gradient(120% 120% at 50% 25%, var(--felt-500), var(--felt-700));
   border: 2px solid var(--gold);
@@ -642,13 +614,13 @@ html.zoom-open { overflow: hidden; }
 .steps h3 {
   font-family: var(--display);
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.32rem;
   margin: 0 0 0.3rem;
 }
 .steps p {
   margin: 0;
   color: var(--cream-soft);
-  font-size: 1.02rem;
+  font-size: 1.1rem;
 }
 
 .phone-figure { margin: 0; }
@@ -669,7 +641,7 @@ html.zoom-open { overflow: hidden; }
 
 .bid-card.alert {
   color: var(--card-red);
-  font-size: 0.92rem;
+  font-size: 1rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -683,14 +655,14 @@ html.zoom-open { overflow: hidden; }
 .faq dt {
   font-family: var(--display);
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.32rem;
   line-height: 1.25;
   margin: 0 0 0.4rem;
 }
 .faq dd {
   margin: 0;
   color: var(--cream-soft);
-  font-size: 1.02rem;
+  font-size: 1.1rem;
 }
 
 /* ---------- closing CTA ---------- */
@@ -711,7 +683,7 @@ html.zoom-open { overflow: hidden; }
 .site-foot {
   border-top: 1px solid var(--hairline);
   padding: 2.6rem 0 3.2rem;
-  font-size: 0.98rem;
+  font-size: 1.05rem;
   color: var(--cream-dim);
 }
 .site-foot .wrap {
@@ -721,7 +693,7 @@ html.zoom-open { overflow: hidden; }
 .foot-mark {
   font-family: var(--display);
   font-weight: 620;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   color: var(--cream-soft);
 }
 .foot-mark .spade { color: var(--gold); }
@@ -730,7 +702,7 @@ html.zoom-open { overflow: hidden; }
 /* ---------- document pages (privacy, terms) ---------- */
 
 .doc-page { padding: 2.5rem 0 5rem; }
-.doc-page .wrap { max-width: 46rem; }
+.doc-page .wrap { max-width: 48rem; }
 .doc-page h1 {
   font-family: var(--display);
   font-weight: 560;
@@ -739,7 +711,7 @@ html.zoom-open { overflow: hidden; }
 }
 .doc-date {
   font-family: var(--mono);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   letter-spacing: 0.08em;
   color: var(--cream-dim);
   margin-bottom: 2.2rem;
@@ -747,10 +719,10 @@ html.zoom-open { overflow: hidden; }
 .doc-page h2 {
   font-family: var(--display);
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin: 2.4rem 0 0.7rem;
 }
-.doc-page p, .doc-page li { color: var(--cream-soft); font-size: 1.05rem; }
+.doc-page p, .doc-page li { color: var(--cream-soft); font-size: 1.12rem; }
 .doc-page strong { color: var(--cream); }
 .doc-page ul { padding-left: 1.3rem; margin: 0 0 1.1em; }
 .doc-page li { margin-bottom: 0.55em; }
@@ -764,17 +736,19 @@ html.zoom-open { overflow: hidden; }
   .split.flip .split-media { order: 2; }
   .split-media { max-width: 560px; }
   .split-media.portrait { max-width: 360px; margin-inline: auto; }
-  .av-scene { max-width: 480px; margin-inline: auto; }
+  .split-media.menu { max-width: 300px; margin-inline: auto; }
 }
 
 @media (max-width: 620px) {
-  body { font-size: 1.06rem; }
+  body { font-size: 1.125rem; }
   .grid { grid-template-columns: 1fr; }
   .faq { grid-template-columns: 1fr; }
   section { padding: 3.4rem 0; }
   .hero { padding: 2.2rem 0 3.4rem; }
-  .hero-sub { font-size: 1.12rem; }
-  /* Log in stays; For clubs is in the footer and the 5C section instead.
+  .hero-sub { font-size: 1.2rem; }
+  .free-band { padding: 2.2rem 0; }
+  .note-band { padding: 3.2rem 0; }
+  /* Log in stays; For clubs is in the footer and the clubs section instead.
      The header tightens so wordmark, Log in and Play free share one row
      down to 360px (and wrap neatly at 320). */
   .head-clubs { display: none; }
@@ -784,11 +758,6 @@ html.zoom-open { overflow: hidden; }
   .head-actions { gap: 1rem; }
   .btn-small { padding: 0.66em 1em; }
   .figure-pair { grid-template-columns: 1fr; }
-  .size-steps { grid-template-columns: 1fr; gap: 1.6rem; }
-  .av-table { margin: 44px 40px; }
-  .av-tile { width: 96px; }
-  .av-tile .face { width: 42px; height: 42px; font-size: 1.05rem; }
-  .av-felt .fan { font-size: 1.4rem; }
 }
 
 @media (max-width: 389px) {

@@ -24,6 +24,32 @@ sitemap.xml       the four pages; bump a <lastmod> when its page changes
 scripts/indexnow.sh, .github/workflows/indexnow.yml   IndexNow pings
 ```
 
+## The home page, in order
+
+Reworked 2026-10-21 around one idea, *your new home for bridge*: any level
+can play here, it is free, it is open all day and all night, and you are in
+control (your table, your tournament, public or private). Card size and the
+"real faces" video pitch were deliberately demoted to a bullet and a section
+respectively.
+
+1. Hero: "Your new home for bridge." and one paragraph.
+2. The free band: no subscriptions, no add-ons, no payments of any kind.
+3. **1♣** the six-card grid. Each card is a link to the section that
+   explains it, in the same order: play at any hour (**1♦**, bots), your own
+   table (**1♥**), talk to your table (**1♠**), tournaments (**1NT**), replay
+   any hand (**2♣**), clubs (**2♦**). Keep the grid and the sections in step.
+4. The signed note from Denny ("From the dealer"): built by a bridge player,
+   for bridge players. Denny's words; change them only with Denny.
+5. **2♥** how to start, then **Alert** for the questions, then the closing.
+
+The bid cards walk up the auction in bridge order, one step a section
+(1♣ 1♦ 1♥ 1♠ 1NT 2♣ 2♦ 2♥ …). Never skip a step, never repeat one; a new
+section takes the next bid and everything after it moves up.
+
+Type is large on purpose (20px body on a desktop, 18px on a phone, captions
+in the body face at 16px): many of the people who play are older. Don't
+shrink it to fit something in.
+
 ## Preview locally
 
 ```sh
@@ -131,10 +157,11 @@ submit `https://bridge.games/sitemap.xml` to both. The queries that find us
 free", "free bridge games no download", "play bridge online free against
 computer". So:
 
-- The `<title>` and meta description speak search ("Play Free Bridge Online
-  — No Download", "against the computer"); `og:title`/`og:description` keep
-  the brand voice ("real faces at the table") for link previews. Keep the
-  description under 160 characters.
+- The `<title>` and meta description speak search ("Play Free Online, No
+  Download", "against bots") around the page's own line, "Your New Home for
+  Bridge"; `og:title`/`og:description` carry that line for link previews.
+  Keep the meta description tight (the 2026-10-21 one runs long on purpose,
+  to name every pillar; trim it before adding to it).
 - The Alert section (`#faq`) answers those queries in plain text, which
   is most of what lets the page rank for them. Its answers sit under the
   honesty guardrails below like any other copy, and "Do I need an account?"
@@ -219,8 +246,12 @@ after the shoot.
   private replay table with Double Dummy bots, after starring it with a
   note; the replay was held, so no bot played a card.
 - Retired 2026-10-21: `table-settings.jpg` (the Create a table dialog shows
-  the same settings list). The video section's "four corners" figure is
-  still a CSS illustration (bots have no cameras).
+  the same settings list). The CSS "four corners" video illustration went
+  with the 2026-10-21 rework (the chat's To menu carries the section now).
+- Shot but not on any page since the 2026-10-21 rework, kept for later:
+  `card-size-normal/-large/-xl.jpg` (card size is one bullet and one FAQ
+  answer now) and `replay-panel.jpg` (Bookmarked Boards shows the same deal
+  panel). `event-director.jpg` is on the clubs page only.
 
 ## Honesty guardrails for future copy
 
@@ -231,6 +262,10 @@ left beta, never one without the others.
 
 Don't claim:
 
+- lessons, hints, tutorials or teaching of any kind: there are none. The
+  beginner pitch is the patient table (bots that never rush, Undo where the
+  table allows it, replay with all four hands up, the traveller to compare)
+  and the FAQ says "no lessons here yet";
 - guest play without an account;
 - bot difficulty levels: there are three bots — BenBot (the default), FastBen
   (faster, and measured slightly weaker: say so wherever it is named) and
